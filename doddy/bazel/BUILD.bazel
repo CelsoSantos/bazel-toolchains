@@ -1,0 +1,15 @@
+filegroup(
+    name = "all_files",
+    testonly = True,
+    srcs = glob(["**"]) + [
+        "//doddy/bazel/private:all_files",
+        "//doddy/bazel/toolchains:all_files",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "all_rules",
+    srcs = glob(["*.bzl"]) + ["//doddy/bazel/private:all_rules", "//doddy/bazel/toolchains:all_rules"],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,33 @@
+# Package groups defined for use in kubernetes visibility rules.
+#
+# See associated README.md for explanation.
+#
+# Style suggestions:
+#
+#  - Sort package group definitions by name.
+#
+#  - Prefer obvious package group names.
+#
+#    E.g "pkg_kubectl_cmd_util_CONSUMERS" names a group
+#    of packages allowed to depend on (consume) the
+#    //pkg/kubectl/cmd/util package.
+#
+#
+#  - A group name ending in _BAD wants to be deleted.
+#
+#    Such a group wants to contract, rather than expand.
+#    It likely exists to permit a legacy unintentional
+#    dependency that requires more work to remove.
+#
+#  - Prefer defining new groups to expanding groups.
+#
+#    The former permits tight targeting, the latter can
+#    allow unnecessary visibility and thus bad deps.
+#
+
+package_group(
+    name = "cli_commands_CONSUMERS",
+    packages = [
+        "//doddy/doddy_cli/commands",
+    ],
+)

@@ -1,0 +1,33 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# Running Gazelle with Bazel
+#
+# By adding the following line to this build file, at the root directory of the
+# repository, Gazelle can be run with Bazel. For instance, the following
+# command will generate the BUILD.bazel files for the project:
+#
+#   $ bazel run //:gazelle
+#
+# This above command can later be invoked again to update existing BUILD.bazel
+# files.
+# Yet another useful Gazelle command is 'update-repos'. The latter helps
+# synchronizing Bazel dependencies (declared in the WORKSPACE file) by using
+# dependencies declared in the 'go.mod' file, as shown below:
+#
+#   $ bazel run //:gazelle -- update-repos -from_file=go.mod
+#
+# As a convenience, the following command may be used as well:
+#
+#   $ make update-repos
+#
+# Last but not least, the 'gazelle:prefix' must be set with the portion of import
+# path corresponding to the current repository path, such as, for instance:
+#
+# gazelle:prefix github.com/somename/circle/doddy
+#
+# In case you want to run Gazelle using the 'go' command, you should take a look
+# at https://github.com/bazelbuild/bazel-gazelle#running-gazelle-with-go.
+
+# gazelle:prefix com.github/somename/circle/doddy
+# gazelle:repository_macro toto%toto
+gazelle(name = "gazelle")
