@@ -111,8 +111,6 @@ load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
 
 gazelle_dependencies()
 
-_go_image_repos()
-
 # -----------------------------------------------------------------------------
 # Python Toolchain (for Devcontainer)
 # -----------------------------------------------------------------------------
