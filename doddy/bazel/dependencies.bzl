@@ -4,9 +4,9 @@ load(
 )
 load(
     "//doddy/bazel/toolchains:py_toolchain.bzl",
-    _py_toolchains = "py_toolchains",
+    _py_register_toolchains = "py_register_toolchains",
 )
 
 doddy_dependencies = _dependencies
 
-py_toolchains = _py_toolchains
+py_register_toolchains = _py_register_toolchains

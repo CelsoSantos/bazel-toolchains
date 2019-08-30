@@ -129,9 +129,9 @@ py_repositories()
 # -----------------------------------------------------------------------------
 # Register the Python toolchains
 # -----------------------------------------------------------------------------
-load("//doddy/bazel:dependencies.bzl", "doddy_dependencies", "py_toolchains")
+load("//doddy/bazel:dependencies.bzl", "doddy_dependencies", "py_register_toolchains")
 
-py_toolchains()
+py_register_toolchains()
 
 # -----------------------------------------------------------------------------
 # Doddy external dependencies
