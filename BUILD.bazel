@@ -1,3 +1,8 @@
+load("//doddy/bazel:dependencies.bzl", "py_runtimes", "py_toolchain")
+
+py_toolchain()
+py_runtimes()
+
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
 # Running Gazelle with Bazel

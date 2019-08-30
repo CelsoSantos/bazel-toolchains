@@ -31,5 +31,4 @@ def py_toolchain():
     )
 
 def py_register_toolchains():
-    # native.register_toolchains(toolchains())
     native.register_toolchains("//:py_toolchain")
